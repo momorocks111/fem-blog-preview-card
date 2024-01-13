@@ -1,0 +1,196 @@
+:root {
+  /* Colors */
+  --Yellow-clr: hsl(47, 88%, 63%);
+  --White-clr: hsl(0, 0%, 100%);
+  --Grey-clr: hsl(0, 0%, 50%);
+  --Black-clr: hsl(0, 0%, 7%);
+
+  /* Typography */
+  --fig-font: "Figtree", sans-serif;
+}
+
+/*=======================
+========= RESETS ========
+=========================*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Yellow-clr);
+}
+
+/*=======================
+========= SECTION ========
+=========================*/
+.blog-section {
+  margin-inline: 5%;
+}
+
+/*=======================
+========= MAIN ========
+=========================*/
+.main {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.blog-container {
+  padding: 1.5rem;
+  background-color: var(--White-clr);
+  border: 1px solid var(--Black-clr);
+  box-shadow: 5px 5px 0px 0px #000000;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  font-family: var(--fig-font);
+}
+
+.img-holder {
+  margin-block-end: 1rem;
+  align-self: center;
+  height: 100%;
+  width: 100%;
+}
+
+.blog-img {
+  height: 200px;
+  width: 279px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.blog-topic {
+  background-color: var(--Yellow-clr);
+  width: max-content;
+  padding-inline: 0.75rem;
+  padding-block: 0.5rem;
+  font-weight: 800;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-block-end: 0.25rem;
+}
+
+.blog-publication-date {
+  font-size: 12px;
+  font-weight: 600;
+  margin-block-end: 0.5rem;
+}
+
+.blog-title {
+  font-weight: 800;
+  margin-block-end: 0.5rem;
+  color: var(--Black-clr);
+  cursor: pointer;
+  width: max-content;
+}
+
+.blog-title:hover {
+  color: var(--Yellow-clr);
+}
+
+.blog-content {
+  color: var(--Grey-clr);
+  font-size: 14px;
+  margin-block-end: 0.75rem;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  column-gap: 0.75rem;
+}
+
+.profile-name {
+  font-weight: 800;
+}
+
+/*=======================
+====== BREAKPOINTS ======
+=========================*/
+@media screen and (max-width: 320px) {
+  .blog-img {
+    height: 175px;
+    width: 225px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .blog-section {
+    margin-inline: 1.5rem;
+    width: 325px;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .main {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .main {
+    width: 90%;
+    margin-inline: auto;
+  }
+}
+
+@media screen and (min-width: 728px) {
+  .blog-section {
+    width: 384px;
+  }
+  .img-holder {
+    margin-block-end: 1rem;
+    align-self: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .blog-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  .blog-container {
+    box-shadow: 12px 12px 0px 0px #000000;
+  }
+  .profile-img {
+    width: 32px;
+  }
+
+  .blog-title {
+    font-size: 24px;
+  }
+
+  .blog-content {
+    font-size: 16px;
+  }
+}
+
+/*=======================
+========= FOOTER ========
+=========================*/
+.forced {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
